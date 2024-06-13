@@ -1,7 +1,6 @@
 // src/App.js
 import { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Header from './components/Header';
+import { Route, Routes } from 'react-router-dom'; import Header from './components/Header';
 import Home from './pages/Home';
 import Options from './pages/Options';
 import Checkout from './pages/Checkout';
@@ -21,19 +20,18 @@ const App = () => {
   }, []);
 
   return (
-    <Router basename={import.meta.env.BASE_URL}>
+    <>
       {loading ? <Preloader /> : (
         <>
+          <Header />
           <Routes>
-            <Route path="/" element={<Header />}>
-              <Route index element={<Home />} />
-              <Route path="/Options" element={<Options />} />
-              <Route path="/Checkout" element={<Checkout />} />
-            </Route>
+            <Route path="/" exact element={<Home />} />
+            <Route path="/Options" element={<Options />} />
+            <Route path="/Checkout" element={<Checkout />} />
           </Routes>
         </>
       )}
-    </Router>
+    </>
   );
 };
 
