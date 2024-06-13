@@ -12,7 +12,6 @@
   --mobile-height: calc(100vh - 101px);
   --width: calc(100% - 300px);
   --title-color: #1b3e70;
-  --cursor-g: url('../public/flat-design-mouse-cursor-set-g.svg') 12 12, auto
 }
 
 input[type='number']::-webkit-outer-spin-button,
@@ -1074,6 +1073,14 @@ main {
   -o-transform: translate(0%, 60%) scale(1.2);
 }
 
+.on-hv#fx-12-2 {
+  transform: translate(0%, 80%) scale(1.5);
+  -webkit-transform: translate(0%, 80%) scale(1.5);
+  -moz-transform: translate(0%, 80%) scale(1.5);
+  -ms-transform: translate(0%, 80%) scale(1.5);
+  -o-transform: translate(0%, 80%) scale(1.5);
+}
+
 #fx-12-1 {
   transform: translate(0%, 60%) scale(1.2);
   -webkit-transform: translate(0%, 60%) scale(1.2);
@@ -1082,7 +1089,21 @@ main {
   -o-transform: translate(0%, 60%) scale(1.2);
 }
 
+.on-hv#fx-12-1 {
+  transform: translate(0%, 45%) scale(1.2);
+  -webkit-transform: translate(0%, 45%) scale(1.2);
+  -moz-transform: translate(0%, 45%) scale(1.2);
+  -ms-transform: translate(0%, 45%) scale(1.2);
+  -o-transform: translate(0%, 45%) scale(1.2);
+}
 
+#fx-6-a.on-hv {
+  transform: translate(0%, 50%) scale(1);
+  -webkit-transform: translate(0%, 50%) scale(1);
+  -moz-transform: translate(0%, 50%) scale(1);
+  -ms-transform: translate(0%, 50%) scale(1);
+  -o-transform: translate(0%, 50%) scale(1);
+}
 
 .select__card:hover::before,
 .select__card.checked::before,
@@ -1129,6 +1150,24 @@ main {
   -o-transform: translate(1%, 40%) scale(1.1);
 }
 
+.select__card.checked .on-hv#fx-12-1,
+.select__card:hover .on-hv#fx-12-1 {
+  transform: translate(0%, 30%) scale(1.2);
+  -webkit-transform: translate(0%, 30%) scale(1.2);
+  -moz-transform: translate(0%, 30%) scale(1.2);
+  -ms-transform: translate(0%, 30%) scale(1.2);
+  -o-transform: translate(0%, 30%) scale(1.2);
+}
+
+.select__card.checked #fx-6-a.on-hv,
+.select__card:hover #fx-6-a.on-hv {
+  transform: translate(0%, 60%) scale(1.9);
+  -webkit-transform: translate(0%, 60%) scale(1.9);
+  -moz-transform: translate(0%, 60%) scale(1.9);
+  -ms-transform: translate(0%, 60%) scale(1.9);
+  -o-transform: translate(0%, 60%) scale(1.9);
+}
+
 .select__card.checked img#fx-6,
 .select__card:hover img#fx-6,
 .select__card.checked img#fx-6-a,
@@ -1164,6 +1203,9 @@ main {
   -ms-transform: translate(-2%, 75%) scale(2);
   -o-transform: translate(-2%, 75%) scale(2);
 }
+
+
+
 
 /*End Components Styles */
 .flex__box {

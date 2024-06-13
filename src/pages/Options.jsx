@@ -91,7 +91,7 @@ function ScrollableComponent() {
             );
         })
         return () => mm.revert();
-    }, [mm]);
+    }, []);
 
     useEffect(() => {
         if (age) {
@@ -216,7 +216,6 @@ function ScrollableComponent() {
                             <div className="fixed-option">
 
                                 <h3 className='option__title t-m s-t'>: باكـچ الرعـاية الذهـبية الشـاملة</h3>
-
                                 <div className="flex__box">
                                     <div>
                                         <label className="select__card mini__card three six" ref={el => divRefs.current[6] = el}>
@@ -314,12 +313,14 @@ function ScrollableComponent() {
 
                                 <div className="flex__box">
                                     <div>
-                                        <label className="select__card mini__card three six" ref={el => divRefs.current[6] = el}>
+                                        <label className="select__card mini__card three six x" ref={el => divRefs.current[6] = el}>
                                             <img id='fx-6-s' src={syringe1} />
-                                            <img id='fx-6-a' src={six} />
+
+                                            <img id='fx-12-1' src={four} />
+                                            <img id='fx-12-2' src={eight} />
                                             <div className='mb-180 mt-10 txt-al'>
                                                 <h3 className='mb-5'>مـدة<br /> ثـلاث شهور </h3>
-                                                <h6 className='mb-5 ml-60 clr'>عبـوات 6</h6>
+                                                <h6 className='mb-5 ml-60 clr'>عبـوة 12</h6>
                                                 <h6 className='ml-75 clr'> + جلسـتين<br /> وخــز تحفـيزي</h6>
                                                 <h5 className='price mt-15'><span className='pr'>بــ</span><span className='gr'> 3300 </span> ريـال سـعودي</h5>
                                             </div>
@@ -334,13 +335,14 @@ function ScrollableComponent() {
                                         </label>
                                     </div>
                                     <div>
-                                        <label className="select__card mini__card three" ref={el => divRefs.current[7] = el}>
+                                        <label className="select__card mini__card three x" ref={el => divRefs.current[7] = el}>
                                             <img id='fx-12-4' src={syringe2} />
                                             <img id='fx-12-1' className='on-hv' src={four} />
+                                            <img id='fx-6-a' className='on-hv x' src={six} />
                                             <img id='fx-12-2' className='on-hv' src={eight} />
                                             <div className='mb-180 mt-25 txt-al'>
                                                 <h3 className='mb-5'>مـدة<br /> ستـة شهور </h3>
-                                                <h6 className='mb-5 ml-60 clr'>عبـوة 12</h6>
+                                                <h6 className='mb-5 ml-60 clr'>عبـوة 24</h6>
                                                 <h6 className='ml-75 clr'> + جلسـات 4<br /> وخــز تحفـيزي</h6>
                                                 <h5 className='price mt-20'><span className='pr'>بــ</span><span className='gr'> 6500 </span> ريـال سـعودي</h5>
                                             </div>
