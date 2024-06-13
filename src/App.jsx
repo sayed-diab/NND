@@ -24,8 +24,8 @@ const App = () => {
       {loading ? <Preloader /> : (
         <>
           <Header />
-          <Route index path="/" exact element={<Home />} />
           <Routes>
+            <Route index path="/" element={<Home />} />
             <Route path="Options" element={<Options />} />
             <Route path="Checkout" element={<Checkout />} />
           </Routes>
