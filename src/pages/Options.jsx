@@ -54,7 +54,7 @@ function ScrollableComponent() {
     const handleSubmit = () => {
         // Save selected option and age here
         // Send it to separate component
-        navigateTo('Checkout', { state: { age, units } });
+        navigateTo('/Checkout', { state: { age, units } });
     };
 
     const handleChildClick = (e) => {

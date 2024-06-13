@@ -71,7 +71,7 @@ export default function Header() {
                                 <Link className="nav-item" to="/#">من نحن</Link>
                             </li>
                             <li>
-                                <Link className="nav-item" id="buy-now-btn" to="Options">أطلب الأن!</Link>
+                                <Link className="nav-item" id="buy-now-btn" to="/Options">أطلب الأن!</Link>
                             </li>
                         </ul>
                         <div className="elements-div">
@@ -82,7 +82,7 @@ export default function Header() {
                             <a href="#checkout">
                                 <FontAwesomeIcon icon={faUser} className="user-icon" aria-label="User Account" />
                             </a>
-                            <Link to="Options">
+                            <Link to="/Options">
                                 <FontAwesomeIcon icon={faCartShopping} className="cart-icon" aria-label="Shopping Cart" />
                             </Link>
                         </div>
