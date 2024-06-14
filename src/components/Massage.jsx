@@ -1,6 +1,4 @@
-// import { massage } from '../data.json'
-// import logo from '/public/favicon.png';
-// import product from '/public/product.png';
+
 import one from '/public/Asset 1.svg';
 import two from '/public/Asset 2.svg';
 import four from '/public/Asset 4.svg';
@@ -16,7 +14,11 @@ export default function Massage({ count, age }) {
 
     return (
         <>
-
+            {count == "" && <label className='mini__card empty'>
+                <div className='mb-15 txt-al'>
+                    <h4 className='mb-5 mt-10 clr'>لم نتلقي اي عـروض </h4>
+                </div>
+            </label>}
             {count == 1 && <label className='select__card mini__card one in'>
                 <div className='mb-15 txt-al'>
                     <h3 className='mb-5 mt-10'>عبـوة </h3>

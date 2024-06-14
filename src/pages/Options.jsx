@@ -147,7 +147,7 @@ function ScrollableComponent() {
                                     checked={units === 1}
                                     onChange={handleOptionChange}
                                     onClick={handleChildClick}
-
+                                    aria-checked
                                 />
                             </label>
                         </div>

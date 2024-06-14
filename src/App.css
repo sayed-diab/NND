@@ -1429,6 +1429,30 @@ main {
   top: 191px;
 }
 
+.mini__card.empty {
+  width: fit-content;
+  height: 170px;
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  margin-bottom: 30px;
+}
+
+.mini__card.empty .txt-al {
+  display: contents;
+}
+
+.mini__card.empty .clr {
+  color: #ccc;
+}
+
+span#p-clr {
+  color: green;
+  font-size: larger;
+}
+
 .select__card.mini__card.in {
   margin-left: auto;
   margin-right: auto;
@@ -1454,7 +1478,7 @@ main {
 }
 
 .bside .submit__btn.ad::before {
-  left: 37px;
+  left: 30px;
 }
 
 /* --------------- */
