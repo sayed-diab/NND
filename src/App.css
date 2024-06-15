@@ -1920,22 +1920,27 @@ span#p-clr {
   }
 
   .bside .t-p {
-    margin-bottom: 0;
+    margin-bottom: 20px;
   }
 
   .bside .submit__btn.ad {
-    margin: 30px auto 30px;
-    width: 200px;
+    margin: 0 auto 20px;
+    width: 220px;
     height: 100px;
     font-size: 16px;
     display: flex;
     justify-content: center;
     align-items: center;
+    font-weight: bold;
+  }
+
+  .mini__card.empty {
+    margin-top: 20px;
   }
 
   .bside .submit__btn.ad::before {
     left: 10px;
-    top: 25%;
+    top: 40%;
   }
 
   .info___col___section .check__logo {
