@@ -16,9 +16,14 @@ jobs:
 
       - name: Setup Node
         uses: actions/setup-node@v3
+        with:
+          node-version: '14'
 
       - name: Install dependencies
         uses: bahmutov/npm-install@v1
+
+      - name: Run tests
+        run: npm test  # تشغيل الاختبارات لضمان أن كل شيء يعمل بشكل صحيح
 
       - name: Build project
         run: npm run build
@@ -33,7 +38,7 @@ jobs:
     name: Deploy
     needs: build
     runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/main'
+    if: github.ref == 'refs/heads/main' && success()  # نشر فقط إذا كانت جميع الخطوات ناجحة
 
     steps:
       - name: Download artifact
