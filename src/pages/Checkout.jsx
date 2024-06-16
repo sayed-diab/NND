@@ -80,7 +80,7 @@ function FixedSide() {
             <div className="aside">
                 <div>
                     <video className='m-v
-                    ' src={main} type="video/mp4" controls muted>
+                    ' src={main} type="video/mp4" autoPlay controls muted>
                     </video>
                 </div>
 
