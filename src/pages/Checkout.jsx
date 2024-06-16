@@ -8,7 +8,7 @@ import gsap from 'gsap';
 import { useEffect, useRef } from 'react';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Testimonials from "../components/Testimonials"
-// import sec from '/sec-main video.mp4';
+import sec from '/sec-main video.mp4';
 // import thred from '/new-product-video.mp4';
 
 function Checkout() {
@@ -217,8 +217,27 @@ export default function Details() {
                     </div>
                 </section>
             </div>
-            <Testimonials />
+            <article className="last__info">
+                <h1>مستخلص من :</h1>
+                <div className='flex__info'>
+                    <div className='components'>
+                        <h2><strong>خلاصة براعم وبذور البروكولي:</strong></h2>
+                        <p><strong> - تشير بعض الدراسات</strong> إلى <strong>تحسن الأعراض</strong> لدى مرضى التوحد عند استعمال <strong>خلاصة البروكولي</strong>. يحتوي على <strong>مضادات أكسدة مهمة</strong>. المكمل يحتوي على <strong>كمية متوازنة</strong> من مستخلص البروكولي مع الإنزيم الخاص لزيادة <strong>امتصاص المواد الفعالة</strong> من المركب.</p>
+                        <h2><strong>كويرسيتين:</strong></h2>
+                        <p> - عنصر مستخلص من الفواكه والخضروات، وهام ل<strong>نشاط الجهاز العصبي</strong> و<strong>مضاد للتأكسد</strong>.</p>
 
+                        <h2><strong>خلاصة بذور الخردل البني:</strong></h2>
+                        <p> - يوفر <strong>كمية مناسبة</strong> من الإنزيم الخاص بتكسير مكونات البروكولي ل<strong>تعظيم الفائدة الحيوية</strong>.</p>
+
+                        <h2><strong>خلاصة ثمار الفلفل الأسود:</strong></h2>
+                        <p>- يزيد <strong>امتصاص المواد الفعالة</strong> من المكمل.</p>
+                    </div>
+                    <video className='sec__video
+                    ' src={sec} type="video/mp4" autoPlay controls muted>
+                    </video>
+                </div>
+            </article>
+            <Testimonials />
         </div>
     );
 }
