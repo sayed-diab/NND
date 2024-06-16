@@ -5,11 +5,15 @@ import main from '/main-video.mp4';
 import { Link } from "react-router-dom";
 import logo from '/favicon.png';
 import gsap from 'gsap';
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Testimonials from "../components/Testimonials"
 import sec from '/sec-main video.mp4';
 // import thred from '/new-product-video.mp4';
+import Preloader from '../components/Preloader';
+
+
+
 
 function Checkout() {
     const location = useLocation();
@@ -95,13 +99,11 @@ function FixedSide() {
 
 gsap.registerPlugin(ScrollTrigger);
 
-export default function Details() {
+function Details() {
 
     const logoRef = useRef(null);
     const checkRef = useRef(null);
     const textRef = useRef(null);
-
-
 
 
 
@@ -174,71 +176,98 @@ export default function Details() {
 
 
 
-    return (
-        <div className='checkout-hero'>
 
-            <div className='checkout__page'>
-                <div className="big__screens">
-                    <Checkout />
-                </div>
-                <section className='main__art'>
-                    <div className="screen__mobile">
+    return (
+        <>
+            <div className='checkout-hero'>
+
+                <div className='checkout__page'>
+                    <div className="big__screens">
                         <Checkout />
                     </div>
-                    <div className="col__section">
-                        <div className="vid--screen--big">
-                            <FixedSide />
+                    <section className='main__art'>
+                        <div className="screen__mobile">
+                            <Checkout />
                         </div>
-                        <article className='info___col___section'>
-                            <div className="t-art">
-                                <div className="check__logo">
-                                    <img ref={logoRef} src={logo} alt="logo" />
-                                    <div className='info_' ref={textRef}>
-                                        <h1>NND Pro Children</h1>
-                                        <p>
-                                            <strong style={{ color: '#ff7d25' }}>مكمل غذائي</strong> فريد يضم
-                                            <strong style={{ color: '#00c0c7' }}> فيتامينات</strong>،
-                                            <strong style={{ color: '#ff9495' }}> معادن</strong>،
-                                            <strong style={{ color: '#ff7d25' }}> خضروات</strong>،
-                                            <strong style={{ color: '#00c0c7' }}> دهون</strong>، و
-                                            <strong style={{ color: '#ff9495' }}> أحماض أمينية</strong> من مصادر طبيعية تم تصميمه واختيار مكوناته بعناية وفقًا لمعايير
-                                            <strong style={{ color: '#ff7d25' }}> العلوم العصبية</strong> وتمت مراجعته وتحليله لضمان
-                                            <strong style={{ color: '#00c0c7' }}> الجودة</strong> و
-                                            <strong style={{ color: '#ff9495' }}> الفعالية</strong>.
-                                        </p>
+                        <div className="col__section">
+                            <div className="vid--screen--big">
+                                <FixedSide />
+                            </div>
+                            <article className='info___col___section'>
+                                <div className="t-art">
+                                    <div className="check__logo">
+                                        <img ref={logoRef} src={logo} alt="logo" />
+                                        <div className='info_' ref={textRef}>
+                                            <h1>NND Pro Children</h1>
+                                            <p>
+                                                <strong style={{ color: '#ff7d25' }}>مكمل غذائي</strong> فريد يضم
+                                                <strong style={{ color: '#00c0c7' }}> فيتامينات</strong>،
+                                                <strong style={{ color: '#ff9495' }}> معادن</strong>،
+                                                <strong style={{ color: '#ff7d25' }}> خضروات</strong>،
+                                                <strong style={{ color: '#00c0c7' }}> دهون</strong>، و
+                                                <strong style={{ color: '#ff9495' }}> أحماض أمينية</strong> من مصادر طبيعية تم تصميمه واختيار مكوناته بعناية وفقًا لمعايير
+                                                <strong style={{ color: '#ff7d25' }}> العلوم العصبية</strong> وتمت مراجعته وتحليله لضمان
+                                                <strong style={{ color: '#00c0c7' }}> الجودة</strong> و
+                                                <strong style={{ color: '#ff9495' }}> الفعالية</strong>.
+                                            </p>
+                                        </div>
                                     </div>
                                 </div>
+                            </article>
+                            <div className="vid--screen--small">
+                                <FixedSide />
                             </div>
-                        </article>
-                        <div className="vid--screen--small">
-                            <FixedSide />
+
                         </div>
-
-                    </div>
-                </section>
-            </div>
-            <article className="last__info">
-                <h1>مستخلص من :</h1>
-                <div className='flex__info'>
-                    <div className='components'>
-                        <h2><strong>خلاصة براعم وبذور البروكولي:</strong></h2>
-                        <p><strong> - تشير بعض الدراسات</strong> إلى <strong>تحسن الأعراض</strong> لدى مرضى التوحد عند استعمال <strong>خلاصة البروكولي</strong>. يحتوي على <strong>مضادات أكسدة مهمة</strong>. المكمل يحتوي على <strong>كمية متوازنة</strong> من مستخلص البروكولي مع الإنزيم الخاص لزيادة <strong>امتصاص المواد الفعالة</strong> من المركب.</p>
-                        <h2><strong>كويرسيتين:</strong></h2>
-                        <p> - عنصر مستخلص من الفواكه والخضروات، وهام ل<strong>نشاط الجهاز العصبي</strong> و<strong>مضاد للتأكسد</strong>.</p>
-
-                        <h2><strong>خلاصة بذور الخردل البني:</strong></h2>
-                        <p> - يوفر <strong>كمية مناسبة</strong> من الإنزيم الخاص بتكسير مكونات البروكولي ل<strong>تعظيم الفائدة الحيوية</strong>.</p>
-
-                        <h2><strong>خلاصة ثمار الفلفل الأسود:</strong></h2>
-                        <p>- يزيد <strong>امتصاص المواد الفعالة</strong> من المكمل.</p>
-                    </div>
-                    <video className='sec__video
-                    ' src={sec} type="video/mp4" autoPlay controls muted>
-                    </video>
+                    </section>
                 </div>
-            </article>
-            <Testimonials />
-        </div>
+                <article className="last__info">
+                    <h1>مستخلص من :</h1>
+                    <div className='flex__info'>
+                        <div className='components'>
+                            <h2><strong>خلاصة براعم وبذور البروكولي:</strong></h2>
+                            <p><strong> - تشير بعض الدراسات</strong> إلى <strong>تحسن الأعراض</strong> لدى مرضى التوحد عند استعمال <strong>خلاصة البروكولي</strong>. يحتوي على <strong>مضادات أكسدة مهمة</strong>. المكمل يحتوي على <strong>كمية متوازنة</strong> من مستخلص البروكولي مع الإنزيم الخاص لزيادة <strong>امتصاص المواد الفعالة</strong> من المركب.</p>
+                            <h2><strong>كويرسيتين:</strong></h2>
+                            <p> - عنصر مستخلص من الفواكه والخضروات، وهام ل<strong>نشاط الجهاز العصبي</strong> و<strong>مضاد للتأكسد</strong>.</p>
+
+                            <h2><strong>خلاصة بذور الخردل البني:</strong></h2>
+                            <p> - يوفر <strong>كمية مناسبة</strong> من الإنزيم الخاص بتكسير مكونات البروكولي ل<strong>تعظيم الفائدة الحيوية</strong>.</p>
+
+                            <h2><strong>خلاصة ثمار الفلفل الأسود:</strong></h2>
+                            <p>- يزيد <strong>امتصاص المواد الفعالة</strong> من المكمل.</p>
+                        </div>
+                        <video className='sec__video
+        ' src={sec} type="video/mp4" autoPlay controls muted>
+                        </video>
+                    </div>
+                </article>
+                <Testimonials />
+            </div>
+        </>
     );
 }
+
+
+
+
+
+
+export default function Output() {
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+        // Simulate a network request
+        setTimeout(() => {
+            setLoading(false);
+        }, 2000);
+    }, []);
+
+    return (
+        <>
+            {loading ? <Preloader /> : (
+                <Details />)}
+        </>
+    )
+}
+
 

@@ -1,16 +1,16 @@
 import { useEffect, useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom'; // Assuming you're using React Router
 import gsap from 'gsap';
-import logo from '/public/favicon.png';
-import product from '/public/product.png';
-import one from '/public/Asset 1.svg';
-import two from '/public/Asset 2.svg';
-import four from '/public/Asset 4.svg';
-import six from '/public/Asset 6.svg';
-import eight from '/public/Asset 8.svg';
-import syringe1 from '/public/Syringe 2.svg';
-import syringe2 from '/public/Syringe 4.svg';
-
+import logo from '/favicon.png';
+import product from '/product.png';
+import one from '/Asset 1.svg';
+import two from '/Asset 2.svg';
+import four from '/Asset 4.svg';
+import six from '/Asset 6.svg';
+import eight from '/Asset 8.svg';
+import syringe1 from '/Syringe 2.svg';
+import syringe2 from '/Syringe 4.svg';
+import Preloader from '../components/Preloader';
 
 function ScrollableComponent() {
     const scrollRef = useRef(null);
@@ -407,12 +407,26 @@ function FixedComponent() {
 }
 
 export default function Options() {
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+        // Simulate a network request
+        setTimeout(() => {
+            setLoading(false);
+        }, 2000);
+    }, []);
     return (
-        <section className='option__page'>
-            <div className="option__container">
-                <ScrollableComponent />
-                <FixedComponent />
-            </div>
-        </section>
+        <>
+            {loading ? <Preloader /> : (<section className='option__page'>
+                <div className="option__container">
+                    <ScrollableComponent />
+                    <FixedComponent />
+                </div>
+            </section>)}
+        </>
     );
 }
+
+
+
+

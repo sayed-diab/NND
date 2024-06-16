@@ -1275,7 +1275,7 @@ main {
 
 .cont {
   position: absolute;
-  top: 15px;
+  top: 60px;
   display: flex;
   flex-direction: column-reverse;
 }
