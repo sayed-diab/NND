@@ -4,7 +4,7 @@ import { Route, Routes } from 'react-router-dom'; import Header from './componen
 import Home from './pages/Home';
 import Options from './pages/Options';
 import Checkout from './pages/Checkout';
-import Preloader from './components/Preloader'; // استيراد Preloader
+import Preloader from './components/Preloader';
 import './fontAwesome';
 import './App.css';
 import 'normalize.css';

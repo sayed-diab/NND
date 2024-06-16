@@ -1,0 +1,132 @@
+.testimonials {
+    padding: 100px 50px;
+    background-color: #f9f9f9;
+    margin-top: 800px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10000px;
+    position: relative;
+    background-image: url('/back-ground.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+
+}
+
+@media (max-width :767px) {
+    .testimonials {
+        margin-top: 400px;
+        padding: 40px 20px;
+    }
+}
+
+.testimonials::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #f5f5f5;
+    opacity: 0.7;
+    left: 0;
+    top: 0;
+    -webkit-filter: grayscale(100%);
+}
+
+.testimonial {
+    background: white;
+    border: 1px solid #ddd;
+    padding: 40px 20px;
+    margin: 10px;
+    height: 400;
+    width: 600px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    position: relative;
+    /* border-radius: 100% 0% 100% 0% / 27% 76% 24% 73%;
+    transition: 0.5s ease;
+    -webkit-transition: 0.5s ease;
+    -moz-transition: 0.5s ease;
+    -ms-transition: 0.5s ease;
+    -o-transition: 0.5s ease;
+    -webkit-border-radius: 100% 0% 100% 0% / 27% 76% 24% 73%;
+    -moz-border-radius: 100% 0% 100% 0% / 27% 76% 24% 73%;
+    -ms-border-radius: 100% 0% 100% 0% / 27% 76% 24% 73%;
+    -o-border-radius: 100% 0% 100% 0% / 27% 76% 24% 73%; */
+}
+
+.testimonial:hover {
+    /* border-radius: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0; */
+}
+
+@media (max-width :992px) {
+    .testimonial {}
+}
+
+@media (max-width :767px) {
+    .testimonial {
+        width: 350px;
+        margin: 0 auto;
+    }
+}
+
+.testimonial-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+}
+
+.avatar {}
+
+.testimonials img {
+    position: absolute;
+}
+
+.avatar h3 {}
+
+.avatar p {}
+
+.quote-icon {
+    position: absolute;
+    bottom: -15px;
+    left: 20px;
+    font-size: 30px;
+    color: #1a3c6d;
+
+}
+
+.testimonial-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.testimonial-text {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    font-style: italic;
+}
+
+.testimonial-name {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.testimonial-relation {
+    color: gray;
+    margin-bottom: 10px;
+}
+
+.testimonial-stars {
+    display: flex;
+}
+
+.star-icon {
+    color: gold;
+    margin-right: 5px;
+}
