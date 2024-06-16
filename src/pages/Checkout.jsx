@@ -1,15 +1,15 @@
 import data from '../data.json';
 import { useLocation } from 'react-router-dom';
 import Massage from '../components/ProductShow';
-import main from '/public/main-video.mp4';
+import main from '/main-video.mp4';
 import { Link } from "react-router-dom";
-import logo from '/public/favicon.png';
+import logo from '/favicon.png';
 import gsap from 'gsap';
 import { useEffect, useRef } from 'react';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Testimonials from "../components/Testimonials"
-// import sec from '/public/sec-main video.mp4';
-// import thred from '/public/sec-video.mp4';
+// import sec from '/sec-main video.mp4';
+// import thred from '/new-product-video.mp4';
 
 function Checkout() {
     const location = useLocation();
@@ -218,6 +218,7 @@ export default function Details() {
                 </section>
             </div>
             <Testimonials />
+
         </div>
     );
 }
