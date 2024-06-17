@@ -327,8 +327,8 @@ function ScrollableComponent() {
                                             <input
                                                 type="radio"
                                                 name="fixed-option"
-                                                value="Compo 1"
-                                                checked={units === "Compo 1"}
+                                                value="Compo 3"
+                                                checked={units === "Compo 3"}
                                                 onChange={handleOptionChange}
                                                 onClick={handleChildClick}
                                             />
@@ -349,8 +349,8 @@ function ScrollableComponent() {
                                             <input
                                                 type="radio"
                                                 name="fixed-option"
-                                                value="Compo 2"
-                                                checked={units === "Compo 2"}
+                                                value="Compo 4"
+                                                checked={units === "Compo 4"}
                                                 onChange={handleOptionChange}
                                                 onClick={handleChildClick}
                                             />

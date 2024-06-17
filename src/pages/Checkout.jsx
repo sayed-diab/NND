@@ -18,7 +18,7 @@ import Preloader from '../components/Preloader';
 function Checkout() {
     const location = useLocation();
     const { age, units } = location.state || {};
-
+    const packagePrice = data.massage
     function calcCost(units) {
         const productCost = data.productPrice * units;
         let shipmentCost = data.firstShipmentCost;
@@ -56,12 +56,12 @@ function Checkout() {
                     <h3>تفصيل التكلفة:</h3>
                     {age === 'less' && (
                         <div>
-                            <p><span><strong>إجمالي تكلفة المنتج:</strong></span> <span id='p-clr'>{units === "Compo 1" ? '3300' : units === "Compo 2" ? '6500' : units === "" ? "--" : costDetails.productCost}</span>  ريال</p>
+                            <p><span><strong>إجمالي تكلفة المنتج:</strong></span> <span id='p-clr'>{units === "Compo 1" ? packagePrice.compo1 : units === packagePrice.compo2 ? '6500' : units === "" ? "--" : costDetails.productCost}</span>  ريال</p>
                         </div>
                     )}
                     {age === 'greater' && (
                         <div>
-                            <p><span><strong>إجمالي تكلفة المنتج:</strong></span> <span id="p-clr">{units === "Compo 1" ? '5800' : units === "Compo 2" ? '11500' : units === "" ? "--" : costDetails.productCost}</span>  ريال</p>
+                            <p><span><strong>إجمالي تكلفة المنتج:</strong></span> <span id="p-clr">{units === "Compo 3" ? packagePrice.compo3 : units === "Compo 4" ? packagePrice.compo4 : units === "" ? "--" : costDetails.productCost}</span>  ريال</p>
                         </div>
                     )}
                     <div>

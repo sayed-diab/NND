@@ -35,9 +35,9 @@ export default function Massage({ count, age }) {
             }
             {count === "Compo 2" && age === 'less' && <img className='bottle12x4 mt-20 mini__card z' id='abs' src={bottle12x4} alt="bottle12x4" />
             }
-            {count === "Compo 1" && age === 'greater' && < img className='bottle12x2 mt-20 mini__card z' id='abs' src={bottle12x2} alt="bottle12x2" />
+            {count === "Compo 3" && age === 'greater' && < img className='bottle12x2 mt-20 mini__card z' id='abs' src={bottle12x2} alt="bottle12x2" />
             }
-            {count === "Compo 2" && age === 'greater' && <img className='bottle24x4 mt-20 mini__card z' id='abs' src={bottle24x4} alt="bottle24x4" />
+            {count === "Compo 4" && age === 'greater' && <img className='bottle24x4 mt-20 mini__card z' id='abs' src={bottle24x4} alt="bottle24x4" />
             }
         </>
     )

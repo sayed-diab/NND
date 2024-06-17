@@ -113,7 +113,7 @@ export default function Home() {
                     <article className="description__box" ref={descRef}>
                         <p>مكـونات تم دراسـتها علـميا تثبت فائـدتها في <strong style={{ color: '#ff9495' }}>تحسـين أعـراض التوحد</strong> كالتواصـل اللغـوي و الاجـتماعي و تـأخر النطـق.</p>
                         <p>يسـاعد على <strong style={{ color: '#00c0c7' }}>تحـسن القـدرات العقـلية والذاكـرة</strong>.</p>
-                        <p>يساعد علي <strong style={{ color: '#ff7d25' }}> .تخفـيض التوتـر ونوبـات الغضـب والأرق وإضرابـات الـنوم</strong></p>
+                        <p>يساعد علي <strong style={{ color: '#ff7d25' }}>تخفـيض التوتـر ونوبـات الغضـب والأرق وإضرابـات الـنوم.</strong></p>
                         <p>مكـونـات <strong style={{ color: '#ff9495' }}>طبيـعية</strong> و <strong style={{ color: '#00c0c7' }}>خـالية من الكـيماويات والاضافـات </strong> و معزز بمركز <strong style={{ color: '#ff9495' }}>عصـير الفـواكه الطبيـعي</strong>.</p>
                     </article>
 
