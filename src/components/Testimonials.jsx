@@ -47,10 +47,7 @@ export default function Testimonials() {
                     trigger: boldRef.current,
                     start: 'top 40%',
                     end: '+=200',
-                    scrub: 2,
-                    // pin: true,
-                    snap: 0.3,
-                    markers: true
+                    scrub: 2
                 }
             }
         );
