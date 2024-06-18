@@ -1,6 +1,10 @@
 import { FaStar, FaQuoteRight } from 'react-icons/fa';
 import data from '../testimonials.json';
 import './Testimonials.css'
+import { useEffect, useRef } from 'react';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
 
 const Testimonial = data.map(data => {
     return (
@@ -29,11 +33,42 @@ const Testimonial = data.map(data => {
         </div>
     )
 })
+export default function Testimonials() {
+    gsap.registerPlugin(ScrollTrigger);
 
-const Testimonials = () => (
-    <div className="testimonials">
-        {Testimonial}
-    </div>
-);
+    const boldRef = useRef(null);
 
-export default Testimonials;
+    useEffect(() => {
+
+        gsap.fromTo(boldRef.current,
+            { opacity: 0, y: -100 },
+            {
+                opacity: 1, y: 10, scrollTrigger: {
+                    trigger: boldRef.current,
+                    start: 'top 40%',
+                    end: '+=200',
+                    scrub: 2,
+                    // pin: true,
+                    snap: 0.3,
+                    markers: true
+                }
+            }
+        );
+
+        return () => {
+            ScrollTrigger.getAll().forEach(trigger => {
+                trigger.kill();
+            });
+        };
+    }, []);
+    return (
+        <div className="testimonials">
+            <div ref={boldRef} className="title">
+                <h1>تجـارب العمـلاء</h1>
+            </div>
+            {Testimonial}
+        </div>
+    )
+
+}
+
