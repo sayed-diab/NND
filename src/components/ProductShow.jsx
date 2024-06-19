@@ -16,7 +16,7 @@ export default function Massage({ count, age }) {
 
     return (
         <>
-            {count == "" && <label className='mini__card empty'>
+            {count == 0 && <label className='mini__card empty'>
                 <div className='mb-15 txt-al'>
                     <h4 className='mb-5 mt-10 clr'>لم نتلقي اي عـروض </h4>
                 </div>
@@ -43,12 +43,3 @@ export default function Massage({ count, age }) {
     )
 }
 
-{/* <p>{count == 1 ? massage.one :
-                count == 2 ? massage.two :
-                    count == 4 ? massage.four :
-                        count == 6 ? massage.six :
-                            age >= 12 && count == 4 ? massage.fourPlus :
-                                count == 8 ? massage.eight :
-                                    count == "Compo 1" ? massage.compo1 :
-                                        count == "Compo 2" ? massage.compo2 : ''
-            }</p> */ }

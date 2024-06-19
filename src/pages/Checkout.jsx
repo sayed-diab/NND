@@ -11,13 +11,14 @@ import Testimonials from "../components/Testimonials"
 import sec from '/sec-main video.mp4';
 // import thred from '/new-product-video.mp4';
 import Preloader from '../components/Preloader';
+import Form from '../components/Form';
 
 
 
 
 function Checkout() {
     const location = useLocation();
-    const { age, units } = location.state || {};
+    const { age = "", units = "" } = location.state || {};
     const packagePrice = data.massage
     function calcCost(units) {
         const productCost = data.productPrice * units;
@@ -54,7 +55,7 @@ function Checkout() {
                     <Massage count={units} age={age} />
                 </div><div className="t-p">
                     <h3>تفصيل التكلفة:</h3>
-                    {age === 'less' && (
+                    {age === 'less' || age === '' && (
                         <div>
                             <p><span><strong>إجمالي تكلفة المنتج:</strong></span> <span id='p-clr'>{units === "Compo 1" ? packagePrice.compo1 : units === packagePrice.compo2 ? '6500' : units === "" ? "--" : costDetails.productCost}</span>  ريال</p>
                         </div>
@@ -242,6 +243,7 @@ function Details() {
                     </div>
                 </article>
                 <Testimonials />
+                <Form />
             </div>
         </>
     );

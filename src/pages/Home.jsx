@@ -117,7 +117,7 @@ export default function Home() {
                         <p>مكـونـات <strong style={{ color: '#ff9495' }}>طبيـعية</strong> و <strong style={{ color: '#00c0c7' }}>خـالية من الكـيماويات والاضافـات </strong> و معزز بمركز <strong style={{ color: '#ff9495' }}>عصـير الفـواكه الطبيـعي</strong>.</p>
                     </article>
 
-                    <Link className="learn__more" ref={btnRef} to="/Options"><strong>أعـرف أكــثر</strong></Link>
+                    <Link className="learn__more" ref={btnRef} to="/Checkout"><strong>أعـرف أكــثر</strong></Link>
                 </div>
             </section>
         </main>

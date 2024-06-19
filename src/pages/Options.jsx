@@ -20,7 +20,7 @@ function ScrollableComponent() {
     const [startY, setStartY] = useState(0);
     const [scrollTop, setScrollTop] = useState(0);
     const [age, setAge] = useState('');
-    const [units, setUnits] = useState('');
+    const [units, setUnits] = useState("");
     const divRefs = useRef([]);
     const ageInputRef = useRef();
     const mm = gsap.matchMedia();
@@ -147,7 +147,6 @@ function ScrollableComponent() {
                                     checked={units === 1}
                                     onChange={handleOptionChange}
                                     onClick={handleChildClick}
-                                    aria-checked
                                 />
                             </label>
                         </div>

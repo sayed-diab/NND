@@ -1990,12 +1990,30 @@ span#p-clr {
     -o-transform: translate(50%, -25%);
   }
 
+  .checkout__page .bside .c-s {
+    position: relative;
+    width: 150px;
+    height: 160px;
+    margin: 10px auto;
+  }
+
+  .checkout__page .bside .c-s .mini__card.empty {
+    width: fit-content;
+    height: 150px;
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    margin-bottom: 30px;
+  }
+
   .bside .t-p {
     display: flex;
     flex-direction: column;
     gap: 0px;
     margin-top: 10px;
-    margin-right: 40px;
+    margin-right: 46px;
   }
 
   .bside .t-p h3 {
@@ -2007,30 +2025,21 @@ span#p-clr {
     margin-bottom: 0px;
     font-size: 12px;
     margin-right: -20px;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
   }
 
   .bside .submit__btn.ad {
-    margin: 0 auto 30px;
-    font-size: 18px;
-    width: 160px;
-    height: 80px;
+    margin: 5px auto 0px;
+    font-size: 10px;
+    width: 149px;
+    height: 30px;
+    display: flex;
   }
 
   .bside .submit__btn.ad::before {
     left: 10px;
   }
 
-  .mini__card.empty {
-    width: fit-content;
-    height: 170px;
-    display: flex;
-    margin: auto;
-    justify-content: center;
-    align-items: center;
-    padding: 0 20px;
-    margin-bottom: 30px;
-  }
 
   .mini__card.empty .txt-al {
     display: contents;
