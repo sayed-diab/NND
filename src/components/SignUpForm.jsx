@@ -74,9 +74,10 @@ function App() {
 
                 <div className="cta-div">
                     <h4>اختر NND PRO Children لصحة طفلك</h4>
-                    <h5>جرّب NND PRO Children اليوم واستثمر في صحة طفلك. احصل عليه الآن لتدعم نموه الصحي وتطويره بشكل أفضل. <br /> اختر الأفضل لطفلك، اختر <span>NND PRO Children</span>.</h5>
+                    <h5>جرّب NND PRO Children اليوم واستثمر في صحة طفلك. احصل عليه الآن لتدعم نموه الصحي وتطويره بشكل أفضل. <br /> اختر الأفضل لطفلك، اختر <br /> <span>NND PRO Children</span>.</h5>
                     <div>
-                        <p> مقدم من :<img src={"./dark-mode/logo.png"} alt="main logo" className="logo_form" /></p>
+                        <span> مقدم من :</span>
+                        <img src={"./dark-mode/logo.png"} alt="main logo" className="logo_form" />
 
                     </div>
 

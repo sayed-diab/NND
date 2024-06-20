@@ -86,7 +86,7 @@ function FixedSide() {
             <div className="aside">
                 <div>
                     <video className='m-v
-                    ' src={main} type="video/mp4" autoPlay controls muted>
+                    ' src={main} type="video/mp4" controls>
                     </video>
                 </div>
 
@@ -223,6 +223,7 @@ function Details() {
                         </div>
                     </section>
                 </div>
+                <Testimonials />
                 <article className="last__info">
                     <h1>مستخلص من :</h1>
                     <div className='flex__info'>
@@ -230,11 +231,11 @@ function Details() {
                             <CollapsedDiv />
                         </div>
                         <video className='sec__video
-        ' src={sec} type="video/mp4" autoPlay controls muted>
+        ' src={sec} type="video/mp4" controls >
                         </video>
                     </div>
                 </article>
-                <Testimonials />
+
                 <Form />
                 <Footer />
             </div>

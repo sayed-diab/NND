@@ -1,7 +1,7 @@
 .testimonials {
-    padding: 100px 150px 50px;
+    padding: 0px 150px 50px;
     background-color: #f9f9f9;
-    margin-top: 300px;
+    margin-top: 360px;
     width: 100%;
     display: flex;
     left: 0;
@@ -43,6 +43,7 @@
 @media (max-width :1199px) {
     .testimonials {
         background-size: 11%;
+        margin-top: 500px;
     }
 
     .title h1 {
@@ -53,8 +54,8 @@
 
 @media (max-width :992px) {
     .testimonials {
-        margin-top: 300px;
-        padding: 100px 75px;
+        margin-top: 500px;
+        padding: 0px 75px 40px;
     }
 
     .title h1 {
@@ -68,8 +69,8 @@
 
 @media (max-width :767px) {
     .testimonials {
-        margin-top: 300px;
-        padding: 150px 20px;
+        margin-top: 500px;
+        padding: 0px 75px 40px;
         gap: 60px;
         background-size: 30%;
     }
