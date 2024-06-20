@@ -1,14 +1,14 @@
 // src/App.js
 import { useState, useEffect } from 'react';
 import { Route, Routes } from 'react-router-dom'; import Header from './components/Header';
+import './App.css';
 import Home from './pages/Home';
 import Options from './pages/Options';
 import Checkout from './pages/Checkout';
 import Preloader from './components/Preloader';
 import './fontAwesome';
-import './App.css';
 import 'normalize.css';
-
+import './components/Form.css'
 const App = () => {
   const [loading, setLoading] = useState(true);
 

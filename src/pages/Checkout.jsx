@@ -12,7 +12,8 @@ import sec from '/sec-main video.mp4';
 // import thred from '/new-product-video.mp4';
 import Preloader from '../components/Preloader';
 import Form from '../components/Form';
-
+import CollapsedDiv from '../components/CollapsedDiv'
+import Footer from '../components/Footer';
 
 
 
@@ -72,7 +73,7 @@ function Checkout() {
                     </div>
                 </div>
                 {units !== "" ? <a className='submit__btn ad' href="https://store.nndprochildren.com/%D8%A7%D9%84%D9%85%D9%83%D9%85%D9%84-%D8%A7%D9%84%D8%BA%D8%B0%D8%A7%D8%A6%D9%8A-%D8%A7%D9%84%D8%B7%D8%A8%D9%8A%D8%B9%D9%8A-%D8%A7%D9%86-%D8%A7%D9%86-%D8%AF%D9%8A-%D9%84%D9%84%D8%A3%D8%B7%D9%81%D8%A7%D9%84/p496109765">تابع الشراء</a> :
-                    <Link className='submit__btn ad' to="/Options">الرجوع الي قائمة العروض</Link>
+                    <Link className='submit__btn ad' to="/Options"> قائمة العروض</Link>
                 }
             </div>
         </>
@@ -226,16 +227,7 @@ function Details() {
                     <h1>مستخلص من :</h1>
                     <div className='flex__info'>
                         <div className='components'>
-                            <h2><strong>خلاصة براعم وبذور البروكولي:</strong></h2>
-                            <p><strong> - تشير بعض الدراسات</strong> إلى <strong>تحسن الأعراض</strong> لدى مرضى التوحد عند استعمال <strong>خلاصة البروكولي</strong>. يحتوي على <strong>مضادات أكسدة مهمة</strong>. المكمل يحتوي على <strong>كمية متوازنة</strong> من مستخلص البروكولي مع الإنزيم الخاص لزيادة <strong>امتصاص المواد الفعالة</strong> من المركب.</p>
-                            <h2><strong>كويرسيتين:</strong></h2>
-                            <p> - عنصر مستخلص من الفواكه والخضروات، وهام ل<strong>نشاط الجهاز العصبي</strong> و<strong>مضاد للتأكسد</strong>.</p>
-
-                            <h2><strong>خلاصة بذور الخردل البني:</strong></h2>
-                            <p> - يوفر <strong>كمية مناسبة</strong> من الإنزيم الخاص بتكسير مكونات البروكولي ل<strong>تعظيم الفائدة الحيوية</strong>.</p>
-
-                            <h2><strong>خلاصة ثمار الفلفل الأسود:</strong></h2>
-                            <p>- يزيد <strong>امتصاص المواد الفعالة</strong> من المكمل.</p>
+                            <CollapsedDiv />
                         </div>
                         <video className='sec__video
         ' src={sec} type="video/mp4" autoPlay controls muted>
@@ -244,7 +236,9 @@ function Details() {
                 </article>
                 <Testimonials />
                 <Form />
+                <Footer />
             </div>
+
         </>
     );
 }
@@ -271,5 +265,6 @@ export default function Output() {
         </>
     )
 }
+
 
 

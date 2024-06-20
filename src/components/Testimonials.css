@@ -1,12 +1,11 @@
 .testimonials {
-    padding: 100px 150px;
+    padding: 100px 150px 50px;
     background-color: #f9f9f9;
     margin-top: 300px;
     width: 100%;
     display: flex;
     left: 0;
     flex-direction: column;
-    margin-bottom: 300px;
     background-image: url('/back-ground.svg');
     background-attachment: fixed;
     background-size: 10%;

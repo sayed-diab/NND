@@ -82,6 +82,7 @@ a {
   -moz-user-drag: none;
   -o-user-drag: none;
   user-drag: none;
+  text-decoration: none !important;
 }
 
 ul {
@@ -525,9 +526,10 @@ main {
 
 .main__title {
   color: var(--title-color);
-  font-size: 54px;
+  font-size: 44px;
   margin-bottom: 0;
   letter-spacing: -0.08px;
+  font-weight: bolder;
 }
 
 .arabic__title {
@@ -549,8 +551,9 @@ main {
 }
 
 .description__box p {
-  color: var(--title-color);
+  color: #9da4ad;
   line-height: 32px;
+  font-weight: 500;
 }
 
 .learn__more,
@@ -577,7 +580,7 @@ main {
 }
 
 .learn__more {
-  bottom: -80px;
+  bottom: -120px;
   position: absolute;
   overflow: hidden;
 }
@@ -709,7 +712,7 @@ main {
 
 
   .landing__product {
-    max-height: 320px;
+    height: 200px;
     margin-top: 50px;
   }
 
@@ -753,8 +756,7 @@ main {
   }
 
   .description__box p {
-    line-height: 1.8;
-    font-size: 12.4px;
+    font-size: 16px;
     max-width: 400px;
   }
 
@@ -789,9 +791,10 @@ main {
   }
 
   .description__box p {
-    line-height: 1.8;
-    font-size: 12.4px;
-    max-width: 320px;
+    font-size: 16px;
+    line-height: 2.2;
+    max-width: 400px;
+    font-weight: 500;
   }
 
 }
@@ -1537,9 +1540,9 @@ main {
   -o-border-radius: 12px;
   color: var(--main-color-alt);
   position: sticky;
-  height: 500px;
+  height: 520px;
   width: 300px;
-  top: 200px;
+  top: 172px;
   border: 1px solid #e7eded;
   transition: 0.5s ease-in-out;
   -webkit-transition: 0.5s ease-in-out;
@@ -1629,8 +1632,6 @@ img#abs {
 
 .checkout__page .bside .c-s {
   position: relative;
-  width: 100%;
-  height: 100%;
 }
 
 .bottle2.mini__card {
@@ -1675,7 +1676,7 @@ span#p-clr {
 }
 
 .mini__card.empty {
-  width: fit-content;
+  width: 170px;
   height: 170px;
   display: flex;
   margin: 0 auto;
@@ -1956,16 +1957,17 @@ span#p-clr {
 
   .info___col___section .check__logo h1 {
 
-    font-size: 30px;
+    font-size: 34px;
+    font-weight: bolder;
     margin-bottom: 10px;
   }
 
   .info___col___section .check__logo p {
     line-height: 34px;
-    font-size: 14px;
+    font-size: 18px;
     color: #777;
     display: block;
-    width: 350px;
+    width: 380px;
   }
 
   /* --------check out--------- */
@@ -1998,7 +2000,7 @@ span#p-clr {
   }
 
   .checkout__page .bside .c-s .mini__card.empty {
-    width: fit-content;
+    width: 150px;
     height: 150px;
     display: flex;
     margin: auto;
@@ -2025,7 +2027,7 @@ span#p-clr {
     margin-bottom: 0px;
     font-size: 12px;
     margin-right: -20px;
-    margin-bottom: 5px;
+    margin-bottom: 0px;
   }
 
   .bside .submit__btn.ad {
@@ -2047,6 +2049,7 @@ span#p-clr {
 
   .mini__card.empty .clr {
     color: #ccc;
+    font-size: 14px;
   }
 
 
@@ -2079,7 +2082,7 @@ span#p-clr {
   .bside .submit__btn.ad {
     margin: 0 auto 20px;
     width: 220px;
-    height: 100px;
+    height: 50px;
     font-size: 16px;
     display: flex;
     justify-content: center;
@@ -2092,8 +2095,8 @@ span#p-clr {
   }
 
   .bside .submit__btn.ad::before {
-    left: 10px;
-    top: 40%;
+    left: 35px;
+    top: 35%;
   }
 
   .info___col___section .check__logo {
@@ -2117,14 +2120,16 @@ span#p-clr {
 
     font-size: 30px;
     margin-bottom: 10px;
+    font-weight: bolder;
   }
 
   .info___col___section .check__logo p {
     line-height: 34px;
-    font-size: 14px;
+    font-size: 18px;
     color: #777;
     display: block;
     width: 350px;
+    font-weight: 500;
   }
 
   .info___col___section .check__logo img {
@@ -2159,7 +2164,7 @@ span#p-clr {
 .flex__info {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: self-start;
 }
 
 .flex__info video {
@@ -2170,6 +2175,10 @@ span#p-clr {
 .flex__info .components {
 
   flex-basis: 630px;
+}
+
+.flex__info .components h5 {
+  color: var(--main-color-alt);
 }
 
 .components h2 {
@@ -2208,6 +2217,7 @@ span#p-clr {
 }
 
 @media (max-width:1199px) {
+
   .last__info h1 {
     font-size: 26px;
   }
@@ -2229,16 +2239,17 @@ span#p-clr {
 @media (max-width:992px) {
   .last__info h1 {
     margin-top: 250px;
-    font-size: 26px;
-    text-align: center;
+    font-size: 32px;
+    font-weight: bolder;
+
   }
 
   .flex__info {
     display: flex;
     flex-direction: column;
-    text-align: center;
-    max-width: 400px;
+    align-items: center;
     margin: 0 auto;
+    width: 100%;
   }
 
   .flex__info video {
@@ -2246,9 +2257,13 @@ span#p-clr {
     margin-top: 60px;
   }
 
-  .components h2 {
-    font-size: 20px;
+  .flex__info .components {
+    flex-basis: 0;
+    width: calc(100% - 60px);
+    margin-left: auto;
   }
+
+  .flex__info .components h5 {}
 
   .components p {
     font-size: 14px;
@@ -2265,7 +2280,7 @@ span#p-clr {
   .last__info h1 {
     margin-top: 0px;
     font-size: 26px;
-    text-align: center;
+    margin-right: 55px;
   }
 
   .flex__info {
@@ -2276,8 +2291,10 @@ span#p-clr {
     width: 100%;
   }
 
-  .components {
-    max-width: 400px;
+  .flex__info .components {
+    flex-basis: 0;
+    width: calc(100% - 100px);
+    margin: 0 auto;
   }
 }
 
