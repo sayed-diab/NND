@@ -6,7 +6,7 @@
     padding-top: 50px;
     padding-bottom: 50px;
     background-color: #484848;
-    height: 100vh;
+    height: 75vh;
 }
 
 .cta-div {
@@ -363,5 +363,74 @@ textarea.input::placeholder {
 
     .cta-div div img {
         height: 40px;
+    }
+}
+
+@media (max-width:525px) {
+    .ic1 {
+        margin-top: 20px;
+    }
+
+    .ic2 {
+        margin-top: 20px;
+    }
+
+
+    .input-container {
+        height: 45px;
+        position: relative;
+        width: 100%;
+    }
+
+    .input {
+        font-size: 18px;
+        height: 80%;
+        border-radius: 6px;
+        width: 80%;
+        -webkit-border-radius: 6px;
+        -moz-border-radius: 6px;
+        -ms-border-radius: 6px;
+        -o-border-radius: 6px;
+    }
+
+    .cta-div {
+        width: 320px;
+        margin-right: 0;
+    }
+
+    textarea.input {
+        height: 80px;
+    }
+
+    .cut {
+        background-color: #484848;
+        border-radius: 8px;
+        height: 12px;
+        right: 0px;
+        position: absolute;
+        top: -12px;
+        -webkit-border-radius: 8px;
+        -moz-border-radius: 8px;
+        -ms-border-radius: 8px;
+        -o-border-radius: 8px;
+    }
+
+    .input:focus~.placeholder-f,
+    .input:not(:placeholder-shown)~.placeholder-f {
+        transform: translateY(-25px) translateX(10px) scale(0.75);
+        -webkit-transform: translateY(-25px) translateX(10px) scale(0.75);
+        -moz-transform: translateY(-25px) translateX(10px) scale(0.75);
+        -ms-transform: translateY(-25px) translateX(10px) scale(0.75);
+        -o-transform: translateY(-25px) translateX(10px) scale(0.75);
+    }
+
+    .form_container {
+        height: 100vh;
+    }
+
+    .form_container .form {
+        flex-direction: column-reverse;
+        align-items: normal;
+        margin-right: 60px;
     }
 }

@@ -69,8 +69,8 @@
 
 @media (max-width :767px) {
     .testimonials {
-        margin-top: 500px;
-        padding: 0px 75px 40px;
+        margin-top: 50px;
+        padding: 0px 52px 40px;
         gap: 60px;
         background-size: 30%;
     }
