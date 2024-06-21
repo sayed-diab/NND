@@ -11,6 +11,7 @@ import syringe1 from '/Syringe 2.svg';
 import syringe2 from '/Syringe 4.svg';
 import Preloader from '../components/Preloader';
 import Checkout from '../components/PriceCard';
+import Form from '../components/Form';
 
 function ScrollableComponent() {
     const scrollRef = useRef(null);
@@ -357,6 +358,7 @@ function ScrollableComponent() {
                 </>
             )}
             <Checkout age={age} units={units} />
+            <Form />
         </div>
     );
 }
