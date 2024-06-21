@@ -1,5 +1,4 @@
 import { useEffect, useRef, useState } from 'react';
-import { useNavigate } from 'react-router-dom'; // Assuming you're using React Router
 import gsap from 'gsap';
 import logo from '/favicon.png';
 import product from '/product.png';
@@ -11,10 +10,10 @@ import eight from '/Asset 8.svg';
 import syringe1 from '/Syringe 2.svg';
 import syringe2 from '/Syringe 4.svg';
 import Preloader from '../components/Preloader';
+import Checkout from '../components/PriceCard';
 
 function ScrollableComponent() {
     const scrollRef = useRef(null);
-    const navigateTo = useNavigate();
 
     const [isDragging, setIsDragging] = useState(false);
     const [startY, setStartY] = useState(0);
@@ -51,11 +50,7 @@ function ScrollableComponent() {
         setUnits(e.target.value);
     };
 
-    const handleSubmit = () => {
-        // Save selected option and age here
-        // Send it to separate component
-        navigateTo('/Checkout', { state: { age, units } });
-    };
+
 
     const handleChildClick = (e) => {
         const allLabels = document.querySelectorAll('.select__card');
@@ -258,7 +253,6 @@ function ScrollableComponent() {
                                         </label>
                                     </div>
                                 </div>
-                                <button className='submit__btn' onClick={handleSubmit}><strong>تابـع</strong></button>
                             </div>
                         </>
 
@@ -356,13 +350,13 @@ function ScrollableComponent() {
                                         </label>
                                     </div>
                                 </div>
-                                <button className='submit__btn' onClick={handleSubmit}><strong>تابـع</strong></button>
                             </div>
                         </>
                     )}
 
                 </>
             )}
+            <Checkout age={age} units={units} />
         </div>
     );
 }
@@ -392,16 +386,19 @@ function FixedComponent() {
     // ref={fixedRef} 
     // ref={titleRef}
     return (
-        <div className="fixed">
-            <img src={product} alt="Our-Product" ref={fixedRef} />
-            <div className='cont'>
-                <h2 className="arabic__title" ref={arabicTitleRef} >المكـمل الغذائـي الطبيعـي ان ان دي للأطفـال</h2>
-                <div className="landing__title" ref={titleRef} >
-                    <img className='lo-logo' src={logo} alt="logo" />
-                    <h1 className="main__title">NND Pro Children</h1>
+        <>
+            <div className="fixed">
+                <img src={product} alt="Our-Product" ref={fixedRef} />
+                <div className='cont'>
+                    <h2 className="arabic__title" ref={arabicTitleRef} >المكـمل الغذائـي الطبيعـي ان ان دي للأطفـال</h2>
+                    <div className="landing__title" ref={titleRef} >
+                        <img className='lo-logo' src={logo} alt="logo" />
+                        <h1 className="main__title">NND Pro Children</h1>
+                    </div>
                 </div>
             </div>
-        </div>
+
+        </>
     );
 }
 

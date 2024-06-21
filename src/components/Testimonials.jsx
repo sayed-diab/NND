@@ -41,13 +41,13 @@ export default function Testimonials() {
     useEffect(() => {
 
         gsap.fromTo(boldRef.current,
-            { opacity: 0, y: -100 },
+            { opacity: 0, y: -200 },
             {
                 opacity: 1, y: 10, scrollTrigger: {
                     trigger: boldRef.current,
                     start: 'top 40%',
                     end: '+=200',
-                    scrub: 2
+                    scrub: 2,
                 }
             }
         );

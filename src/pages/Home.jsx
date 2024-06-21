@@ -1,8 +1,9 @@
 import { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
-import { Link } from 'react-router-dom';
+
 import product from '/public/product.png';
 import logo from '/public/favicon.png';
+import Checkout from './Checkout'
 import '../App.css';
 
 export default function Home() {
@@ -92,7 +93,7 @@ export default function Home() {
     }, []);
 
     return (
-        <main className="container">
+        <main>
             <section className="landing__container">
                 <img
                     className="landing__product"
@@ -118,9 +119,9 @@ export default function Home() {
                         مكـونـات <strong style={{ color: '#ff9495' }}>طبيـعية</strong> و <strong style={{ color: '#00c0c7' }}>خـالية من الكـيماويات والاضافـات </strong> و معزز بمركز <strong style={{ color: '#ff9495' }}>عصـير الفـواكه الطبيـعي</strong>.
                     </p></article>
 
-                    <Link className="learn__more" ref={btnRef} to="/Checkout"><strong>أعـرف أكــثر</strong></Link>
                 </div>
             </section>
+            <Checkout />
         </main>
     );
 }
