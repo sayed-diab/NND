@@ -18,4 +18,18 @@
 
 .accordion-button:not(.collapsed)>h5 {
     color: white;
+
+
+}
+
+.accordion-button>h5 {
+    @media (max-width:767px) {
+        font-size: 14px;
+        font-weight: bold;
+    }
+
+    @media (max-width:430px) {
+        font-size: 8px;
+        font-weight: bold;
+    }
 }

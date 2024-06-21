@@ -3,7 +3,7 @@ import { gsap } from 'gsap';
 
 import product from '/public/product.png';
 import logo from '/public/favicon.png';
-import Checkout from './Checkout'
+import Content from './Content'
 import '../App.css';
 
 export default function Home() {
@@ -121,7 +121,7 @@ export default function Home() {
 
                 </div>
             </section>
-            <Checkout />
+            <Content />
         </main>
     );
 }

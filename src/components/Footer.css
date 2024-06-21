@@ -1,5 +1,5 @@
 .footer {
-    background-color: #e7eded;
+    background-color: #00c5a9;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -22,7 +22,7 @@
 
 .link {
     text-decoration: none;
-    color: #00c5a9;
+    color: #e7eded;
     margin-left: 5px;
 }
 

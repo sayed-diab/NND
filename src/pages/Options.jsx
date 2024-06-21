@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
+import { useNavigate } from 'react-router-dom'; // Assuming you're using React Router
 import gsap from 'gsap';
 import logo from '/favicon.png';
 import product from '/product.png';
@@ -10,11 +11,10 @@ import eight from '/Asset 8.svg';
 import syringe1 from '/Syringe 2.svg';
 import syringe2 from '/Syringe 4.svg';
 import Preloader from '../components/Preloader';
-import Checkout from '../components/PriceCard';
-import Form from '../components/Form';
 
 function ScrollableComponent() {
     const scrollRef = useRef(null);
+    const navigateTo = useNavigate();
 
     const [isDragging, setIsDragging] = useState(false);
     const [startY, setStartY] = useState(0);
@@ -51,7 +51,11 @@ function ScrollableComponent() {
         setUnits(e.target.value);
     };
 
-
+    const handleSubmit = () => {
+        // Save selected option and age here
+        // Send it to separate component
+        navigateTo('/Checkout', { state: { age, units } });
+    };
 
     const handleChildClick = (e) => {
         const allLabels = document.querySelectorAll('.select__card');
@@ -131,7 +135,7 @@ function ScrollableComponent() {
                         <div>
                             <label className='select__card mini__card one' ref={el => divRefs.current[0] = el}>
                                 <div className='mb-15 txt-al'>
-                                    <h3 className='mb-5 mt-10'>عبـوة </h3>
+                                    <h3 className='mb--5 mt-10'>عبـوة </h3>
                                     <h5 className='clr'>واحـدة فقـط</h5>
                                     <h5 className='price'><span className='pr'>بــ</span><span className='gr'> 400 </span> ريـال سـعودي</h5>
                                 </div>
@@ -156,7 +160,7 @@ function ScrollableComponent() {
                                         <label className="select__card mini__card two" ref={el => divRefs.current[1] = el}>
                                             <img id='fx-2' src={two} />
                                             <div className='mb-15 mt-40 txt-al'>
-                                                <h3 className='mb-5'>مـدة شهر </h3>
+                                                <h3 className='mb--5'>مـدة شهر </h3>
                                                 <h5 className='clr'>عبـوتين</h5>
                                                 <h5 className='price mt-10'><span className='pr'>بــ</span><span className='gr'> 800 </span> ريـال سـعودي</h5>
                                             </div>
@@ -174,7 +178,7 @@ function ScrollableComponent() {
                                         <label className="select__card mini__card two" ref={el => divRefs.current[2] = el}>
                                             <img id='fx-4' src={four} />
                                             <div className='mb-15 mt-40 txt-al'>
-                                                <h3 className='mb-5'>مـدة شـهرين </h3>
+                                                <h3 className='mb--5'>مـدة شـهرين </h3>
                                                 <h5 className='clr'>عبـوات 4</h5>
                                                 <h5 className='price mt-10'><span className='pr'>بــ</span><span className='gr'> 1600 </span> ريـال سـعودي</h5>
                                             </div>
@@ -192,7 +196,7 @@ function ScrollableComponent() {
                                         <label className="select__card mini__card two" ref={el => divRefs.current[3] = el}>
                                             <img id='fx-6' src={six} />
                                             <div className='mb-15 mt-40 txt-al'>
-                                                <h3 className='mb-5'>مــدة<br /> ثـلاث شهور </h3>
+                                                <h3 className='mb--5'>مــدة<br /> ثـلاث شهور </h3>
                                                 <h5 className='clr'>عبـوات 6</h5>
                                                 <h5 className='price mt-10'><span className='pr'>بــ</span><span className='gr'> 2400 </span> ريـال سـعودي</h5>
                                             </div>
@@ -217,8 +221,8 @@ function ScrollableComponent() {
                                             <img id='fx-6-s' src={syringe1} />
                                             <img id='fx-6-a' src={six} />
                                             <div className='mb-180 mt-10 txt-al'>
-                                                <h3 className='mb-5'>مـدة<br /> ثـلاث شهور </h3>
-                                                <h6 className='mb-5 ml-60 clr'>عبـوات 6</h6>
+                                                <h3 className='mb--5'>مـدة<br /> ثـلاث شهور </h3>
+                                                <h6 className='mb--5 ml-60 clr'>عبـوات 6</h6>
                                                 <h6 className='ml-75 clr'> + جلسـتين<br /> وخــز تحفـيزي</h6>
                                                 <h5 className='price mt-15'><span className='pr'>بــ</span><span className='gr'> 3300 </span> ريـال سـعودي</h5>
                                             </div>
@@ -238,8 +242,8 @@ function ScrollableComponent() {
                                             <img id='fx-12-1' className='on-hv' src={four} />
                                             <img id='fx-12-2' className='on-hv' src={eight} />
                                             <div className='mb-180 mt-25 txt-al'>
-                                                <h3 className='mb-5'>مـدة<br /> ستـة شهور </h3>
-                                                <h6 className='mb-5 ml-60 clr'>عبـوة 12</h6>
+                                                <h3 className='mb--5'>مـدة<br /> ستـة شهور </h3>
+                                                <h6 className='mb--5 ml-60 clr'>عبـوة 12</h6>
                                                 <h6 className='ml-75 clr'> + جلسـات 4<br /> وخــز تحفـيزي</h6>
                                                 <h5 className='price mt-20'><span className='pr'>بــ</span><span className='gr'> 6500 </span> ريـال سـعودي</h5>
                                             </div>
@@ -254,6 +258,7 @@ function ScrollableComponent() {
                                         </label>
                                     </div>
                                 </div>
+                                <button className='submit__btn' onClick={handleSubmit}><strong>تابـع</strong></button>
                             </div>
                         </>
 
@@ -267,7 +272,7 @@ function ScrollableComponent() {
                                         <label className="select__card mini__card two" ref={el => divRefs.current[4] = el}>
                                             <img id='fx-4' src={four} />
                                             <div className='mb-15 mt-40 txt-al'>
-                                                <h3 className='mb-5'>مـدة شهر </h3>
+                                                <h3 className='mb--5'>مـدة شهر </h3>
                                                 <h5 className='clr'>عبوات 4</h5>
                                                 <h5 className='price mt-10'><span className='pr'>بــ</span><span className='gr'> 1600 </span> ريـال سـعودي</h5>
                                             </div>
@@ -285,7 +290,7 @@ function ScrollableComponent() {
                                         <label className="select__card mini__card two" ref={el => divRefs.current[5] = el}>
                                             <img id='fx-8' src={eight} />
                                             <div className='mb-15 mt-40 txt-al'>
-                                                <h3 className='mb-5'>مـدة شهرين </h3>
+                                                <h3 className='mb--5'>مـدة شهرين </h3>
                                                 <h5 className='clr'>عبوات 8</h5>
                                                 <h5 className='price mt-10'><span className='pr'>بــ</span><span className='gr'> 3200 </span> ريـال سـعودي</h5>
                                             </div>
@@ -313,8 +318,8 @@ function ScrollableComponent() {
                                             <img id='fx-12-1' src={four} />
                                             <img id='fx-12-2' src={eight} />
                                             <div className='mb-180 mt-10 txt-al'>
-                                                <h3 className='mb-5'>مـدة<br /> ثـلاث شهور </h3>
-                                                <h6 className='mb-5 ml-60 clr'>عبـوة 12</h6>
+                                                <h3 className='mb--5'>مـدة<br /> ثـلاث شهور </h3>
+                                                <h6 className='mb--5 ml-60 clr'>عبـوة 12</h6>
                                                 <h6 className='ml-75 clr'> + جلسـتين<br /> وخــز تحفـيزي</h6>
                                                 <h5 className='price mt-15'><span className='pr'>بــ</span><span className='gr'> 3300 </span> ريـال سـعودي</h5>
                                             </div>
@@ -335,8 +340,8 @@ function ScrollableComponent() {
                                             <img id='fx-6-a' className='on-hv x' src={six} />
                                             <img id='fx-12-2' className='on-hv' src={eight} />
                                             <div className='mb-180 mt-25 txt-al'>
-                                                <h3 className='mb-5'>مـدة<br /> ستـة شهور </h3>
-                                                <h6 className='mb-5 ml-60 clr'>عبـوة 24</h6>
+                                                <h3 className='mb--5'>مـدة<br /> ستـة شهور </h3>
+                                                <h6 className='mb--5 ml-60 clr'>عبـوة 24</h6>
                                                 <h6 className='ml-75 clr'> + جلسـات 4<br /> وخــز تحفـيزي</h6>
                                                 <h5 className='price mt-20'><span className='pr'>بــ</span><span className='gr'> 6500 </span> ريـال سـعودي</h5>
                                             </div>
@@ -351,14 +356,13 @@ function ScrollableComponent() {
                                         </label>
                                     </div>
                                 </div>
+                                <button className='submit__btn' onClick={handleSubmit}><strong>تابـع</strong></button>
                             </div>
                         </>
                     )}
 
                 </>
             )}
-            <Checkout age={age} units={units} />
-            <Form />
         </div>
     );
 }
