@@ -4,7 +4,6 @@ import { Route, Routes } from 'react-router-dom'; import Header from './componen
 import './App.css';
 import Home from './pages/Home';
 import Options from './pages/Options';
-import Checkout from './pages/Checkout';
 import Preloader from './components/Preloader';
 import './fontAwesome';
 import 'normalize.css';
@@ -27,7 +26,6 @@ const App = () => {
           <Routes>
             <Route path="/" exact element={<Home />} />
             <Route path="/Options" element={<Options />} />
-            <Route path="/Checkout" element={<Checkout />} />
           </Routes>
         </>
       )}
