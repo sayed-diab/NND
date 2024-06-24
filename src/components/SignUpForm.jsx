@@ -13,7 +13,7 @@ function App() {
 
 
     const formRef = useRef(null);
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbxwJKHgwUb_AXtD5JIGdvsAEcnXhUBaDnQwxobY1Ta5I1J-Mq8iGF9GKJJynTYNyLTt/exec';
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbw1GWf0e3lZErftqOXyTzqAk0F9OdgfzQCq__iA9fROChSwmh2RkgJgBLuK4ksqdIxc/exec';
     const redirectURL = '/';
 
     const handleSubmit = (e) => {
@@ -21,7 +21,7 @@ function App() {
 
         fetch(scriptURL, {
             method: 'POST',
-            body: new FormData(formRef.current)
+            body: new FormData(formRef.current),
         })
             .then(response => {
                 if (response.ok) {
@@ -69,7 +69,7 @@ function App() {
 
                         <textarea className="input" name="الملاحظات" placeholder="الملاحظات"></textarea>
                     </label>
-                    <button type="text" className="submit">أرسال</button>
+                    <button type="submit" className="submit">أرسال</button>
                 </form>
 
                 <div className="cta-div">
@@ -90,4 +90,3 @@ function App() {
 }
 
 export default App;
-

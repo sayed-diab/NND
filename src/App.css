@@ -864,6 +864,11 @@ main {
 .option__container {
   display: flex;
   height: 100%;
+  transition: 0.5s ease;
+  -webkit-transition: 0.5s ease;
+  -moz-transition: 0.5s ease;
+  -ms-transition: 0.5s ease;
+  -o-transition: 0.5s ease;
 }
 
 .scrollable {
@@ -2257,11 +2262,17 @@ span#p-clr {
 .ch-ouut {
   display: flex;
   flex-direction: row-reverse;
-
-  .form_container {}
+  transition: 0.5s ease;
+  -webkit-transition: 0.5s ease;
+  -moz-transition: 0.5s ease;
+  -ms-transition: 0.5s ease;
+  -o-transition: 0.5s ease;
 
   .aside {
     display: flex;
     position: relative;
   }
+
+
+
 }
