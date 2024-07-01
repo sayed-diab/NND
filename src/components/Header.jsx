@@ -49,7 +49,7 @@ export default function Header() {
     return (
         <>
             <header className="header">
-                <a href="http://store.nndprochildren.com/">
+                <a href="#">
                     <img className="logo-site" src={logo} alt="Main Logo" />
                 </a>
                 <div className="ctv">

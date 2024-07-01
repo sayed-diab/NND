@@ -13,7 +13,7 @@ function App() {
 
 
     const formRef = useRef(null);
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbw1GWf0e3lZErftqOXyTzqAk0F9OdgfzQCq__iA9fROChSwmh2RkgJgBLuK4ksqdIxc/exec';
+    const scriptURL = '#';
     const redirectURL = '/';
 
     const handleSubmit = (e) => {
